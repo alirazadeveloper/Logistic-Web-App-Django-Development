@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="main-wrapper h-100 mb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-xl-4 mb-4">
+                <h4 class="table-title main-title">Consolidations</h4>
+            </div>
+            <div style="float: right; padding: 20px;" class="col-sm-8 col-xl-8 mb-8">
+                                                  <!-- not subscribed -->
+                    <!-- subscription  -->
+                    <div class="col-md-12 block_subscibe">
+                        <div class="row">
+                            <div class="col-md-3" style="padding: 0rem;">
+                                <img src="/img/offer.svg" style="width: 100%;">
+                            </div>
+                            <div class="col-md-9 block_text_sub" style="overflow-x:hidden;">
+                                <p class="text_block_sub">
+                                    Consolidate your shipments from USA for FREE when you subscribe to MYBOX PLUS for a yearly fee of $90 USD.
+                                </p>
+                                <form method="GET" action="https://mybox.postaplus.com/pay" accept-charset="UTF-8">
+                                <input type="hidden" name="subscribe" value="true">
+                                <input type="hidden" name="from" value="consolidation">
+                                <button class="btn btn-outline-warning btn_sub" id="subscribe">Subscribe to MYBOX plus
+                                </button>
+                                </form>
+                                <div class="row">
+                                    <a style="float: right;margin-right: 10px;color: #e87d1e; font-size: smaller;" target="_blank" href="https://youtu.be/1M2ANo7fxDA">Learn more <span class="	fa fa-info-circle"></span></a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                                                </div>
+        </div>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                    <a class="nav-link   active " id="shipments-tab" data-toggle="tab" href="#shipments" role="tab" aria-controls="shipments" aria-selected="true">Shipments to Consolidate</a>
+                </li>
+                            <li class="nav-item">
+                <a class="nav-link " id="consolidations-tab" data-toggle="tab" href="#consolidations" role="tab" aria-controls="consolidations" aria-selected="false">All Consolidations</a>
+            </li>
+            <li class="nav-item ml-auto">
+                <button class="btn button px-3" id="open_consolidation" onclick="open_consolidation()">
+                Open Consolidation
+                </button>
+            </li>
+
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade   show active " id="shipments" role="tabpanel" aria-labelledby="shipments-tab">
+                    <div class="row align-items-center my-3">
+                        <div class="col-sm-4 col-xl-2 mb-2">
+                            <div class="">
+                                <button class="btn button px-3" id="consolidate-shipment" disabled=""><span><img src="/img-sm/consolidation3.svg" class="icon" width="23px"> </span>Consolidate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note my-3"><span class="star">* </span>Please select at least 1 shipment to consolidate
+                    </div>
+                    <div class="my-3"><span class="orange">Consolidation Number: </span><span>No Active Consolidation</span>
+                    </div>
+
+                    <div id="consolidations-shipments-table_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="consolidations-shipments-table_length"><label>Show <select name="consolidations-shipments-table_length" aria-controls="consolidations-shipments-table" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="consolidations-shipments-table_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="consolidations-shipments-table"></label></div><table id="consolidations-shipments-table" class="hover row-border table dataTable no-footer dtr-column" width="100%" role="grid" aria-describedby="consolidations-shipments-table_info" style="width: 100%;">
+                        <thead>
+                        <tr role="row"><th style="width: 20px; display: none;" class="control sorting_disabled" rowspan="1" colspan="1" aria-label=""></th><th style="width: 20px;" class="select-checkbox sorting_disabled" rowspan="1" colspan="1" aria-label=""></th><th class="sorting" tabindex="0" aria-controls="consolidations-shipments-table" rowspan="1" colspan="1" style="width: 96px;" aria-label="Shipment No: activate to sort column ascending">Shipment No</th><th class="sorting" tabindex="0" aria-controls="consolidations-shipments-table" rowspan="1" colspan="1" style="width: 98px;" aria-label="Reference No: activate to sort column ascending">Reference No</th><th class="sorting" tabindex="0" aria-controls="consolidations-shipments-table" rowspan="1" colspan="1" style="width: 46px;" aria-label="Origin: activate to sort column ascending">Origin</th><th class="sorting" tabindex="0" aria-controls="consolidations-shipments-table" rowspan="1" colspan="1" style="width: 408px;" aria-label="Last Status: activate to sort column ascending">Last Status</th><th class="sorting" tabindex="0" aria-controls="consolidations-shipments-table" rowspan="1" colspan="1" style="width: 84px;" aria-label="Description: activate to sort column ascending">Description</th><th class="view_dteails_td sorting_disabled" rowspan="1" colspan="1" style="width: 53px;" aria-label="Details">Details</th></tr>
+                        </thead>
+                        <tbody id="shipments-table-body">
+                                                    <tr class="odd"><td valign="top" colspan="7" class="dataTables_empty">No data available in table</td></tr></tbody>
+                    </table><div class="dataTables_info" id="consolidations-shipments-table_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div><div class="dataTables_paginate paging_simple_numbers" id="consolidations-shipments-table_paginate"><a class="paginate_button previous disabled" aria-controls="consolidations-shipments-table" data-dt-idx="0" tabindex="0" id="consolidations-shipments-table_previous">Previous</a><span></span><a class="paginate_button next disabled" aria-controls="consolidations-shipments-table" data-dt-idx="1" tabindex="0" id="consolidations-shipments-table_next">Next</a></div></div>
+                </div>
+                        <div class="tab-pane fade  " id="consolidations" role="tabpanel" aria-labelledby="consolidations-tab">
+                <!--	<div class="col col-md-3 col-xl-2 mb-2 text-center">-->
+                <div class="mb-2">
+                    <button class="btn button px-4 mw-100" id="close-consolidation" style="margin-top: 15px;" data-allow="">
+                        <span></span>Close for Delivery
+                    </button>
+                </div>
+                <form method="GET" action="https://mybox.postaplus.com/shipments/consolidations" accept-charset="UTF-8" id="filter-form">
+                <div class="row align-items-center my-3">
+                    <div class="col-md-5 col-lg-4 mb-2">
+                        <div class="row">
+                            <div class="col-2"><span class="filter-lbl mr-2">Filter:</span></div>
+                            <div class="col-10">
+                                <div class="SumoSelect" tabindex="0" role="button" aria-expanded="false"><select class="filter-select sumo-select SelectClass" id="filter_cons" name="filter" onchange="this.form.submit()">
+                                    <option value="ALL">All</option>
+                                    <option value="ACTIVE" selected="">Active</option>
+                                    <option value="CLOSED">Closed</option>
+                                </select><p class="CaptionCont SelectBox" title=" Active"><span> Active</span><label><i></i></label></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+                <div id="consolidations-all-table_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="consolidations-all-table_length"><label>Show <select name="consolidations-all-table_length" aria-controls="consolidations-all-table" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="consolidations-all-table_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="consolidations-all-table"></label></div><table id="consolidations-all-table" class="hover row-border table dataTable no-footer dtr-column" width="100%" role="grid" aria-describedby="consolidations-all-table_info" style="width: 100%;">
+                    <thead>
+                    <tr role="row"><th style="width: 0px;" class="control sorting_asc" rowspan="1" colspan="1" aria-label=""></th><th class="sorting" tabindex="0" aria-controls="consolidations-all-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Consolidation Number: activate to sort column ascending">Consolidation Number</th><th class="sorting" tabindex="0" aria-controls="consolidations-all-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Status Date: activate to sort column ascending">Status Date</th><th class="sorting" tabindex="0" aria-controls="consolidations-all-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Status: activate to sort column ascending">Status</th><th class="sorting" tabindex="0" aria-controls="consolidations-all-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="No. of Shipments: activate to sort column ascending">No. of Shipments</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 0px;" aria-label="Actual Weight">Actual Weight</th><th class="sorting" tabindex="0" aria-controls="consolidations-all-table" rowspan="1" colspan="1" style="width: 0px;" aria-label="Details: activate to sort column ascending">Details</th></tr>
+                    </thead>
+                    <tbody id="consolidations-table">
+                                            <tr class="odd"><td valign="top" colspan="7" class="dataTables_empty">No data available in table</td></tr></tbody>
+                </table><div class="dataTables_info" id="consolidations-all-table_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div><div class="dataTables_paginate paging_simple_numbers" id="consolidations-all-table_paginate"><a class="paginate_button previous disabled" aria-controls="consolidations-all-table" data-dt-idx="0" tabindex="0" id="consolidations-all-table_previous">Previous</a><span></span><a class="paginate_button next disabled" aria-controls="consolidations-all-table" data-dt-idx="1" tabindex="0" id="consolidations-all-table_next">Next</a></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

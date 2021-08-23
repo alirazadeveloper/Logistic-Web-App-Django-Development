@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.826 32.76">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e87d1e;
+      }
+    </style>
+  </defs>
+  <g id="Group_48" data-name="Group 48" transform="translate(-10.012 -9.14)">
+    <g id="linkedin" transform="translate(10.012 9.139)">
+      <g id="Group_39" data-name="Group 39" transform="translate(0 0)">
+        <path id="Path_57" data-name="Path 57" class="cls-1" d="M81.127,95.276h6.789V117.16H81.127ZM84.555,84.4A3.955,3.955,0,1,1,80.6,88.355,3.967,3.967,0,0,1,84.555,84.4" transform="translate(-80.6 -84.4)"/>
+        <path id="Path_58" data-name="Path 58" class="cls-1" d="M98.2,100.593h6.526v2.966h.066a7.17,7.17,0,0,1,6.46-3.559c6.855,0,8.173,4.548,8.173,10.415v12h-6.789V111.8c0-2.5-.066-5.8-3.559-5.8-3.559,0-4.087,2.768-4.087,5.6v10.81H98.2Z" transform="translate(-86.599 -89.717)"/>
+      </g>
+    </g>
+  </g>
+</svg>

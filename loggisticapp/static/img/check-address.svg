@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6430.212 1116.298 129.584 114.542">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #fafbfc;
+      }
+
+      .cls-1, .cls-4 {
+        stroke: #e87d1e;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #e87d1e;
+      }
+
+      .cls-3 {
+        opacity: 0.56;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_7737" data-name="Group 7737" transform="translate(-7743 -82)">
+    <g id="XMLID_1_" transform="translate(1313.787 1199.298)">
+      <path id="XMLID_3_" class="cls-1" d="M200.268,115.784c0,16.549-29.984,56.527-29.984,56.527S140.3,132.333,140.3,115.784a29.984,29.984,0,0,1,59.968,0Z" transform="translate(-140.3 -85.8)"/>
+      <ellipse id="XMLID_2_" class="cls-2" cx="23.594" cy="23.594" rx="23.594" ry="23.594" transform="translate(6.39 6.882)"/>
+    </g>
+    <g id="Group_7734" data-name="Group 7734" transform="translate(1343.771 1218.887)">
+      <ellipse id="Ellipse_11" data-name="Ellipse 11" class="cls-3" cx="39.395" cy="39.395" rx="39.395" ry="39.395"/>
+      <ellipse id="Ellipse_12" data-name="Ellipse 12" class="cls-4" cx="39.395" cy="39.395" rx="39.395" ry="39.395"/>
+      <line id="Line_56" data-name="Line 56" class="cls-1" x2="28.386" y2="28.518" transform="translate(69.505 64.73)"/>
+    </g>
+  </g>
+</svg>

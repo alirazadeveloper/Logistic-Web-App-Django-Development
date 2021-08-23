@@ -1,0 +1,479 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+
+<header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container-fluid">
+<a class="navbar-brand fst-normal text-white text-uppercase fs-4" href="#">LOGISTIC</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle fst-normal text-white fs-5" style="padding-left: 20px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		MainMenu
+	</a>
+	<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+		<li><a class="dropdown-item" href="#">Action</a></li>
+		<li><a class="dropdown-item" href="#">Another action</a></li>
+		<li><hr class="dropdown-divider"></li>
+		<li><a class="dropdown-item" href="#">Something else here</a></li>
+	</ul>
+	</li>
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle fst-normal text-white fs-5" style="padding-left: 30px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		HelpBox
+	</a>
+	<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+		<li><a class="dropdown-item" href="#">Action</a></li>
+		<li><a class="dropdown-item" href="#">Another action</a></li>
+		<li><hr class="dropdown-divider"></li>
+		<li><a class="dropdown-item" href="#">Something else here</a></li>
+	</ul>
+	</li>
+	<li class="nav-item">
+	<a class="nav-link active fst-normal text-white fs-5" style="padding-left: 30px;" aria-current="page" href="#">TopStories</a>
+	</li>
+</ul>
+<form class="d-flex">
+	{% csrf_token %}
+	<button class="btn btn1 btn-outline-dark btn-sm fst-normal btn-light" type="button" data-bs-toggle="modal" data-bs-target="#signinmodal">Sign In</button>
+	<div class="vertical"></div>
+	<button class="btn btn-outline-dark btn-sm fst-normal btn-light" type="button" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+</form>
+</div>
+</div>
+</nav>
+
+
+<div class="container">  <!-- class block_text_in_header added for ramadan theme -->
+	<div class="track_plant" style="margin-top: 18px;width: 1110px;height: 288px;">
+		<img src="/static/img/airplane.gif" id="track_text_box" style="display: block; height: 19em; width: 44em; top: -25%; right: 20%;" class="track_plant_header">
+		<h1 class="title_header text-white" >
+			<p class="font-bold mb-4"><span id="typed">Shop <span id="typed2" style="color:#004c70" class="">easy</span><span class="typed-cursor typed-cursor--blink">|</span></span><span class="typed-cursor typed-cursor--blink" style="display: none;">|</span></p>
+			<p class="mb-4">from Anywhere Around the World</p>
+			<p class="font-bold">Ship <span class="font-bolder">LOGISTIC</span> to Your Door</p>
+		</h1>
+
+		<div class="row header-btns">
+			<div class="col-sm-12 ">
+				<div class="row flex">
+					<div class="col-md-6 col-lg-3">
+						<div>
+						<button class="btn btn-white mb-3 mb-md-0 btn-light join" type="button" data-bs-toggle="modal" data-bs-target="#signupModal">Join LOGISTIC</button>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 offset-lg-6">
+						<div>
+							<button class="btn btn-transparent header-video mb-3 mb-md-0" data-toggle="modal" data-target="#mybox-video-modal"><span><img src="/static/img/icon_play.svg" class="icon_play" style=" height: 35px;width: auto;"></span> <span style="vertical-align: bottom;">What is MYBOX?</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<a class="start-arrow" href="#links-slider"><img src="/static/img/3_Arrows.svg" class="arraow_down animation_arraow_down" id="arraow_down"></a>
+</div>
+</header>
+<br>
+
+<a href="#" class="back-to-top " title="Back to top"><img data-src="/static/img/menu-arrow.svg" class=" lazyloaded" loading="lazy" alt="" src="/static/img/menu-arrow.svg"></a>
+<section class="pt-4 mt-4 links-slider-wrapper" id="links-slider">
+	<div class="container">
+		<div class="links-slider slick-initialized slick-slider"><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 1110px; transform: translate3d(0px, 0px, 0px);"><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 370px;"><div><a class="link-block" href="#calculate-rates-wrapper" style="width: 100%; display: inline-block;" tabindex="0">
+				<div><span><img data-src="/static/img/calculator.svg" alt="" loading="lazy" class=" lazyloaded" src="/static/img/calculator.svg"></span> <span class="title">Calculate Rates</span></div>
+				<div class="text"></div>
+			</a></div></div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 370px;"><div><a class="link-block" href="#track-shipments" style="width: 100%; display: inline-block;" tabindex="0">
+				<div><span><img data-src="/static/img/truck.svg" alt="" loading="lazy" class=" lazyloaded" src="/static/img/truck.svg"></span> <span class="title">Track Shipment</span></div>
+				<div class="text"></div>
+			</a></div></div><div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 370px;"><div><a class="link-block" href="#addresses" style="width: 100%; display: inline-block;" tabindex="0">
+				<div><span><img data-src="/static/img/check-address.svg" alt="" loading="lazy" class=" lazyloaded" src="/static/img/check-address.svg"></span> <span class="title">Shipping  Addresses</span></div>
+				<div class="text"></div>
+			</a></div></div></div></div></div>
+	</div>
+</section>
+
+<!-- section signup -->
+
+<section id="how-it-works" class="how-it-works pt-2 mt-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>
+					<div id="title_section_signup"> <span href="#" class="open_how_it_works"><span class="underline">How</span> it Works ?</span>
+						<span class="show-more" data-toggle="modal" data-target="#how_it_works_modal">Show More</span>
+					</div>
+				</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6">
+				<img data-src="/static/img/1-sign-up-line.gif" class="gif_signup_line lazyloaded" loading="lazy" src="/static/img/1-sign-up-line.gif">
+				<img data-src="/static/img/Sign_up_Gif.gif" class="gif_signup img-fluid lazyloaded" loading="lazy" src="/static/img/Sign_up_Gif.gif">
+			</div>
+			<div class="col-lg-6 mt-5" id="text_section_signup">
+				<h3 class="title_text_section">
+					Sign Up
+				</h3>
+				<div class="text_section pr-4">With LOGISTIC you can order from anywhere in the world and have it sent straight to your door step.
+					<p></p>
+					<p></p>No more searching around websites hoping that one of them ships to your country.
+					<p></p>
+					<p></p>No more overpaying for stuff you know you can get cheaper online.
+					<p></p>
+					<p></p>Now you can order anything you like and have it shipped straight to your home.
+					<p></p>
+					<p></p>Click here to sign up and start shopping!</div>
+										<a href="#">
+						<button type="button" class="btn btn-primary btn_singup_section button mr-5 mt-2" id="signup-btn">Sign up</button></a>
+								</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- section address -->
+<section id="addresses" class="addresses pt-5 pb-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h3 class="title_full_section">
+					Shipping Addresses
+				</h3>
+			</div>
+			<div class="col-lg-6">
+				<div class="addresses-slider slick-initialized slick-slider"><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 540px; transform: translate3d(0px, 0px, 0px);"><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 540px;"><div><div class="address-wrapper" data-country-code="USA" style="width: 33.3333%; display: inline-block;">
+		<a href="" tabindex="0"><div class="address">
+				<img data-src="/static/img/USA.svg" class="img-fluid address-img lazyloaded" loading="lazy" src="/static/img/USA.svg">
+				<h4 class="address-name">United States</h4>
+			</div></a>
+	</div><div class="address-wrapper" data-country-code="GBR" style="width: 33.3333%; display: inline-block;">
+		<a href="#" tabindex="0"><div class="address">
+				<img data-src="/static/img/united-kingdom.svg" class="img-fluid address-img lazyloaded" loading="lazy" src="/static/img/united-kingdom.svg">
+				<h4 class="address-name">United Kingdom</h4>
+			</div></a>
+	</div><div class="address-wrapper" data-country-code="CAN" style="width: 33.3333%; display: inline-block;">
+		<a href="#" tabindex="0"><div class="address">
+				<img data-src="/static/img/canada.svg" class="img-fluid address-img lazyloaded" loading="lazy" src="/static/img/canada.svg">
+				<h4 class="address-name">Canada</h4>
+			</div></a>
+	</div></div><div><div class="address-wrapper" data-country-code="CHN" style="width: 33.3333%; display: inline-block;">
+		<a href="#" tabindex="0"><div class="address">
+				<img data-src="/static/img/1537340636.png" class="img-fluid address-img lazyloaded" loading="lazy" src="/static/img/1537340636.png">
+				<h4 class="address-name">China</h4>
+			</div></a>
+	</div><div class="address-wrapper" data-country-code="ARE" style="width: 33.3333%; display: inline-block;">
+		<a href="#" tabindex="0"><div class="address">
+				<img data-src="/static/img/1543397316.png" class="img-fluid address-img lazyloaded" loading="lazy" src="/static/img/1543397316.png">
+				<h4 class="address-name">United Arab Emirates</h4>
+			</div></a>
+	</div></div></div></div></div></div>
+			</div>
+			<div class="col-lg-6">
+				<!-- <img data-src="/static/img/3-addresses-line-1.gif" class="gif_addresses_line lazyloaded" loading="lazy" src="/static/img/3-addresses-line-1.gif"> -->
+				<img data-src="/static/img/Addresses_Gif.gif" class="gif_addresses img-fluid lazyloaded" loading="lazy" src="/static/img/Addresses_Gif.gif">
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- sent us email -->
+
+<section id="contact-us" class="contact-us mt-5 pt-3" style="overflow-x: hidden">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7 col-xl-6">
+				<h3 class="title_text_section mb-4" style="width: 100%;border: none;color: #e87d1e;font-size: 1.3em;">
+					Send Us an  E-mail
+				</h3>
+				<form id="contact-form">
+					<div class="error-message d-none"></div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control input_send_email first-name" maxlength="20" placeholder="First Name*" required="">
+								<span class="required-note">This field is required.</span>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control input_send_email last-name" maxlength="20" placeholder="Last Name*" required="">
+								<span class="required-note">This field is required.</span>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control input_send_email" name="mobile" maxlength="15" placeholder="Your Phone (optional)">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="email" class="form-control input_send_email" name="email" placeholder="Your Email*" required="">
+								<div class="email-not-valid-note"></div>
+								<span class="required-note">This field is required.</span>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="text" style="width: 95%;" class="form-control input_send_email" name="message" placeholder="Your Message*" required="">
+								<span class="required-note">This field is required.</span>
+							</div>
+						</div>
+						<div class="col-md-12 text-end">
+							<button type="submit" class="btn send-btn text-center" form="contact-form" formnovalidate=""><img data-src="/static/img/send-icon.svg" alt="send" class="w-100 lazyloaded" loading="lazy" src="/static/img/send-icon.svg"></button>
+						</div>
+					</div>
+				</form>
+
+			</div>
+			<div class="col-lg-5 col-xl-6">
+				<div class="block_info_send_email">
+					<h3 class="title_content_info mb-5">
+						Contact Information
+					</h3>
+					<div class="">
+						<div class="block_info_contact contact-address">
+							<div class="row">
+								<div class="col-2 text-center"><img data-src="/static/img/placeholder_blue.svg" class=" lazyloaded" loading="lazy" src="/static/img/placeholder_blue.svg"></div>
+								<div class="col-10">
+									<a class="text d-block" href="http://maps.google.com/maps/search/?api=1&amp;query=29.327075,47.937274" target="_blank">Postaplus-Kuwait,
+									Shuwaikh Industrial 1, Block 2, 
+									St. 13, Unit 85, Dia Behbehani Building</a>
+								</div>
+							</div>
+						</div>
+						<div class="block_info_contact contact-phone">
+							<div class="row">
+								<div class="col-2 text-center"><img data-src="/static/img/smartphone_blue.svg" class=" lazyloaded" loading="lazy" src="/static/img/smartphone_blue.svg"></div>
+								<div class="col-10">
+									<a class="text" href="tel: (+965) 1881881"> (+965) 1881881</a>
+
+								</div>
+							</div>
+						</div>
+						<div class="block_info_contact contact-fax">
+							<div class="row">
+								<div class="col-2 text-center"><img data-src="/static/img/fax_blue.svg" class=" lazyloaded" loading="lazy" src="/static/img/fax_blue.svg"></div>
+								<div class="col-10">
+									<div class="text">(+965) 24312134</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bg-img">
+						<img data-src="/static/img/co.svg" style="height: 235px; width: fit-content;margin-right: 2rem;margin-top: -10rem;" class="img-responsive lazyloaded" loading="lazy" src="/static/img/co.svg">
+					</div>
+					<div class="block_social_media mt-5" >
+						<a href="#" style="margin-left: 3em;" onclick="window.open (this.href, 'popupwindow',  'width=800,height=800,scrollbars,resizable'); return false;" class="social_media ml-4"><img data-src="/static/img/facebook-1.svg" class=" lazyloaded" loading="lazy" alt="facebook" width="12px" src="/static/img/facebook-1.svg"></a>
+						<a href="#" style="margin-left: 3em;" onclick="window.open (this.href, 'popupwindow',  'width=800,height=800,scrollbars,resizable'); return false;" class="social_media"><img data-src="/static/img/twitter.svg" alt="twitter" class=" lazyloaded" loading="lazy" width="25px" src="/static/img/twitter.svg"></a>
+						<a href="#" style="margin-left: 3em;" onclick="window.open (this.href, 'popupwindow',  'width=800,height=800,scrollbars,resizable'); return false;" class="social_media"><img data-src="/static/img/instagram-1.svg" class=" lazyloaded" loading="lazy" alt="instagram" width="23px" src="/static/img/instagram-1.svg"></a>
+						<a href="#" style="margin-left: 3em;" onclick="window.open (this.href, 'popupwindow',  'width=800,height=800,scrollbars,resizable'); return false;" class="social_media"><img data-src="/static/img/youtube.svg" class=" lazyloaded" loading="lazy" alt="YouTube" width="23px" src="/static/img/youtube.svg"></a>
+						<a href="#" style="margin-left: 3em;" onclick="window.open (this.href, 'popupwindow',  'width=800,height=800,scrollbars,resizable'); return false;" class="social_media"><img data-src="/static/img/linkedin.svg" class=" lazyloaded" loading="lazy" alt="linked-in" width="21px" src="/static/img/linkedin.svg"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Modal sign in -->
+<section>
+<div class="modal fade" id="signinmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<!-- <div>
+			<img src="/static/img/BG.png" align="left" style="width:28%;height: 300px;">
+		</div> -->
+		<div class="modal-body">
+			<form action="{% url 'dashboardpage' %}" method="post">
+				{% csrf_token %}
+				<div class="modal-body">				
+					<div class="form-group">
+						<label>Username</label>
+						<input type="text" class="form-control" >
+					</div>
+					<div class="form-group">
+						<div class="clearfix">
+							<label>Password</label>
+							<a href="#" class="float-right text-muted"><small>Forgot?</small></a>
+						</div>
+						
+						<input type="password" class="form-control">
+					</div>
+				</div>
+				<div class="  d-flex justify-content-between" style="align-items: center;">
+					<div>
+						<label class="form-check-label " style="text-align: left;"><input type="checkbox"> Remember me</label>
+					</div>
+					<div>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			  			<button type="submit" class="btn btn-primary">Sign In</button>
+					</div>
+				</div>
+				
+				<div class="modal-footer">
+					
+				  
+				</div>
+			</form>
+		</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+
+<!-- required="required" -->
+<!-- sign up model -->
+<section>
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Sign up</h5>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<form action="{% url 'dashboardpage' %}" method="post">
+				{% csrf_token %}
+				<p>Please fill in this form to create an account!</p>
+				<hr>
+				<div class="form-group">
+					<label>Username</label>
+					<input type="text" class="form-control" name="username" >
+				</div>
+				<div class="form-group">
+					<label>Email Address</label>
+					<input type="email" class="form-control" name="email" >
+				</div>
+				<div class="form-group">
+					<label>Password</label>
+					<input type="password" class="form-control" name="password" >
+				</div>
+				<div class="form-group">
+					<label>Confirm Password</label>
+					<input type="password" class="form-control" name="confirm_password" >
+				</div>
+				<div class="form-group form-check">
+					<input type="checkbox" class="form-check-input" >
+					<label class="form-check-label">I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-primary">Sign up</button>
+				  </div>
+			</form>
+		</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Logistic App
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Laravel</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Contact
+            </h6>
+            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4 text-white" style="background-color:#db6d13;">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold text-white" href="#">builtinsoft.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+
+
+{% endblock %}

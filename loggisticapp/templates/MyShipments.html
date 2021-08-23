@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<section>
+    <div class="shipments-table-wrapper main-wrapper h-100 mb-4">
+        <div class="container">
+             
+                         <h4 class="table-title main-title">My Shipments</h4>
+            <div class="row align-items-center mb-2">
+                    <div class="col-md-7 col-lg-6 mb-2">
+                    <div class="row">
+                        <form method="GET" action="" accept-charset="UTF-8" id="filter-form" class="row p-2 w-100">
+    
+                        <div class="col-2"><span class="filter-lbl mr-2">Filter:</span></div>
+                        <div class=" col-8 ">
+                            <div class="SumoSelect sumo_filter" tabindex="0" role="button" aria-expanded="false"><select class="filter-select sumo-select filter SumoUnder" id="filter" name="filter" tabindex="-1">
+                                <option value="PENDING">Pending shipments</option>
+                                <option value="DELIVERED">Delivered shipments</option>
+                            </select><p class="CaptionCont SelectBox" title=" Pending shipments"><span> Pending shipments</span><label><i></i></label></p><div class="optWrapper"><ul class="options"><li class="opt selected"><label>Pending shipments</label></li><li class="opt"><label>Delivered shipments</label></li></ul></div></div>
+                        </div>
+                                                </form>
+    
+                    </div>
+                </div>
+                <form method="GET" action="https://mybox.postaplus.com/pay" accept-charset="UTF-8" id="multi-pay-form">
+                    <input type="text" hidden="" id="multi-pay-input" name="shipmentNo" value="">
+                </form>
+                <div class="col col-md-3 col-lg text-right mb-2">
+                    <div class="hold-btn"><button class="btn button" disabled="" id="hold-shipment"><span><img src="/static/img/hold3.svg" style="height: 23px;" class="icon" alt=""> </span>Hold for Pickup</button></div>
+                </div>
+                <div class="col col-md-4 col-lg text-right mb-2">
+                    <div class="pay-btn"><button id="pay-btn" class="btn button"><span><img src="/static/img/coin.svg" class="icon"> </span>Pay</button></div>
+                </div>
+                <div class="col col-md-4 col-lg text-right mb-2">
+                    <div class="pay-btn">
+                        <a id="" class="btn button text-white" href="#"><span>
+                             <img src="/static/img/search-white.svg" class="icon"> </span>Search
+                        </a>
+                    </div>
+                </div>
+            <div class="col-6 col-md-4 col-lg-3 text-right mb-2">
+            </div>
+            </div>
+            <div id="shipments-table_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="shipments-table_length"><label>Show <select name="shipments-table_length" aria-controls="shipments-table" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><table id="shipments-table" class="hover row-border table dataTable no-footer dtr-column" role="grid" aria-describedby="shipments-table_info" style="width: 1115px;">
+                <thead>
+                    <tr role="row"><th class="control sorting_disabled" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label=""></th><th class="icon_check_td select-checkbox sorting_disabled" rowspan="1" colspan="1" style="width: 0px;" aria-label=""></th><th class="sorting" tabindex="0" aria-controls="shipments-table" rowspan="1" colspan="1" style="width: 72px;" aria-label="Shipment Date: activate to sort column ascending">Shipment Date</th><th class="sorting" tabindex="0" aria-controls="shipments-table" rowspan="1" colspan="1" style="width: 31px;" aria-label="AWB No.: activate to sort column ascending">AWB No.</th><th class="sorting" tabindex="0" aria-controls="shipments-table" rowspan="1" colspan="1" style="width: 39px;" aria-label="Origin: activate to sort column ascending">Origin</th><th class="last_status_td sorting_disabled" style="width: 316px;" rowspan="1" colspan="1" aria-label="Last Status">Last Status</th><th class="sorting" tabindex="0" aria-controls="shipments-table" rowspan="1" colspan="1" style="width: 74px;" aria-label="Description: activate to sort column ascending">Description</th><th style="width: 104px;" class="sorting_disabled" rowspan="1" colspan="1" aria-label="Payment Status">Payment Status</th><th style="width: 103px;" class="sorting_disabled" rowspan="1" colspan="1" aria-label="Amount">Amount</th><th class="view_dteails_td sorting_disabled" style="width: 51px;" rowspan="1" colspan="1" aria-label="Details">Details</th></tr>
+                </thead>
+                <tbody id="shipment-body">
+                                  <tr class="odd"><td valign="top" colspan="9" class="dataTables_empty">No data available in table</td></tr></tbody>
+            </table><div class="dataTables_info" id="shipments-table_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div><div class="dataTables_paginate paging_simple_numbers" id="shipments-table_paginate"><a class="paginate_button previous disabled" aria-controls="shipments-table" data-dt-idx="0" tabindex="0" id="shipments-table_previous">Previous</a><span></span><a class="paginate_button next disabled" aria-controls="shipments-table" data-dt-idx="1" tabindex="0" id="shipments-table_next">Next</a></div></div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
