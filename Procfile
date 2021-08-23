@@ -1,1 +1,1 @@
-web: gunicorn myshipment.wsgi --log-file -
+web: gunicorn logistic.wsgi --log-file -
